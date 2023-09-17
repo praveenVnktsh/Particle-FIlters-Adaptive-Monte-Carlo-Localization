@@ -46,15 +46,21 @@ def visualize_map(occupancy_map):
     # plt.axis([0, 800, 0, 800])
 
 
-def visualize_timestep(X_bar, tstep, output_path):
-    x_locs = X_bar[:, 0] / 10.0
-    y_locs = X_bar[:, 1] / 10.0
+def visualize_timestep(occupancy_map, particles):
+    resized_map = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
+    resized_map -= np.min(resized_map)
+    resized_map /= np.max(resized_map)
+    resized_map *= 255
+    resized_map = resized_map.astype(np.uint8)
+    resized_map = cv2.cvtColor(resized_map, cv2.COLOR_GRAY2BGR)
     
-    # scat = plt.scatter(x_locs, y_locs, c='r', marker='o')
-    # plt.savefig('{}/{:04d}.png'.format(output_path, tstep))
-    # plt.pause(0.00001)
-    # scat.remove()
-
+    for x in particles:
+        print(x)
+        cv2.circle(resized_map, (int(x[0] ), int(x[1] )), 10, (0, 0, 255), -1)
+    cv2.imshow('map', resized_map)
+    if cv2.waitKey(0) == ord('q'):
+        exit(0)
+    
 
 def init_particles_random(num_particles, occupancy_map):
 
@@ -112,7 +118,7 @@ if __name__ == '__main__':
     parser.add_argument('--path_to_map', default='../data/map/wean.dat')
     parser.add_argument('--path_to_log', default='../data/log/robotdata1.log')
     parser.add_argument('--output', default='results')
-    parser.add_argument('--num_particles', default=500, type=int)
+    parser.add_argument('--num_particles', default=10, type=int)
     parser.add_argument('--visualize', action='store_true')
     args = parser.parse_args()
 
@@ -130,8 +136,12 @@ if __name__ == '__main__':
 
     num_particles = args.num_particles
     # X_bar = init_particles_random(num_particles, occupancy_map)
+    # print(map_obj.get_map_size_x(), map_obj.get_map_size_y()    )
     X_bar = init_particles_freespace(num_particles, occupancy_map)
+    # print(occupancy_map.shape)
+    # exit()
     # viz_map_particles(occupancy_map, X_bar)
+    visualize_timestep(occupancy_map, X_bar)
     """
     Monte Carlo Localization Algorithm : Main Loop
     """
@@ -189,16 +199,16 @@ if __name__ == '__main__':
                 z_t = ranges
                 w_t = sensor_model.beam_range_finder_model(z_t, x_t1)
                 X_bar_new[m, :] = np.hstack((x_t1, w_t))
-            # else:
-            #     X_bar_new[m, :] = np.hstack((x_t1, X_bar[m, 3]))
-
+            else:
+                X_bar_new[m, :] = np.hstack((x_t1, X_bar[m, 3]))
+                
+        # visualize_timestep(occupancy_map, X_bar_new)
         X_bar = X_bar_new
         u_t0 = u_t1
-
         """
         RESAMPLING
         """
-        X_bar = resampler.low_variance_sampler(X_bar)
+        # X_bar = resampler.low_variance_sampler(X_bar)
 
         if args.visualize:
             visualize_timestep(X_bar, time_idx, args.output)

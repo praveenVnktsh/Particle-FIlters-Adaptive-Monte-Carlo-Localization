@@ -32,7 +32,7 @@ class SensorModel:
         self._lambda_short = 0.1
 
         # Used in p_max and p_rand, optionally in ray casting
-        self._max_range = 1000
+        self._max_range = 1000 #/ 10
 
         # Used for thresholding obstacles of the occupancy map
         self._min_probability = 0.35
@@ -41,6 +41,7 @@ class SensorModel:
         self._subsampling = 1
         self.occupancy_map = occupancy_map
         self.resolution = 1
+        # print(self.occupancy_map.shape)
 
     def beam_range_finder_model(self, z_t1_arr, x_t1):
         """
@@ -60,6 +61,9 @@ class SensorModel:
                 for j in range(self._max_range):
                     x_t += self.resolution * np.cos(angle * np.pi / 180)
                     y_t += self.resolution * np.sin(angle * np.pi / 180)
+                    if x_t < 0 or x_t >= occupancy_map.shape[0] or y_t < 0 or y_t >= occupancy_map.shape[1]:
+                        true_measurements.append(self._max_range)
+                        break
                     if occupancy_map[int(x_t), int(y_t)] > self._min_probability:
                         # return np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2)
                         true_measurements.append(np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
@@ -71,6 +75,7 @@ class SensorModel:
         z_t1_arr = z_t1_arr[::self._subsampling]
         z_true_ranges = raycast(self.occupancy_map, x_t1, z_t1_arr)
         
+        # print(np.linalg.norm(z_t1_arr - z_true_ranges))        
         
         for k in range(len(z_t1_arr)):
             z_measured = z_t1_arr[k]
