@@ -38,9 +38,9 @@ class SensorModel:
         self._min_probability = 0.35
 
         # Used in sampling angles in ray casting
-        self._subsampling = 1
+        self._subsampling = 5
         self.occupancy_map = occupancy_map
-        self.resolution = 1
+        self.resolution = 10
         # print(self.occupancy_map.shape)
 
     def beam_range_finder_model(self, z_t1_arr, x_t1):
@@ -62,19 +62,21 @@ class SensorModel:
             for angle in np.linspace(theta - 90, theta + 90, len(zs)):
                 x_t = x[0]
                 y_t = x[1]
-                
-                for j in range(self._max_range):
-                    x_t += self.resolution * np.cos(angle * np.pi / 180)
-                    y_t += self.resolution * np.sin(angle * np.pi / 180)
-                    if x_t < 0 or x_t >= occupancy_map.shape[0] or y_t < 0 or y_t >= occupancy_map.shape[1]:
+                # print(self._max_range, )
+                for j in range(0, self._max_range, self.resolution):
+                    x_t = x[0] + j * np.cos(angle * np.pi / 180)
+                    y_t = x[1] + j * np.sin(angle * np.pi / 180)
+                    if x_t < 0 or x_t >= occupancy_map.shape[0] * 10 or y_t < 0 or y_t >= occupancy_map.shape[1] * 10:
+                        print("out of bounds")
                         true_measurements.append(self._max_range)
                         break
-                    if occupancy_map[int(x_t), int(y_t)] > self._min_probability:
+                    if occupancy_map[int(x_t/10), int(y_t/10)] > self._min_probability:
                         # return np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2)
+                        print("found measurement")
                         true_measurements.append(np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
                         break
-                    
-                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 3, (0, 0, 255), -1)
+                    col = (occupancy_map[int(x_t/10), int(y_t/10)] + 1)/ np.max(occupancy_map)
+                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, int(255 - col* 255) ), -1)
                     
             return true_measurements, vizmap
 
@@ -82,8 +84,8 @@ class SensorModel:
         z_t1_arr = z_t1_arr[::self._subsampling]
         z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
         cv2.imshow('maap', vizmap)
+        print(len(z_true_ranges), len(z_t1_arr))
         cv2.waitKey(0)
-        
         # print(np.linalg.norm(z_t1_arr - z_true_ranges))        
         
         for k in range(len(z_t1_arr)):

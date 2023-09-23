@@ -27,7 +27,7 @@ def viz_map_particles(occupancy_map, x):
     for xx in x:
         cv2.circle(resized_map, (int(xx[0]/10 ), int(xx[1]/10 )), 2, (0, 0, 255), -1)
     cv2.imshow('map', resized_map)
-    if cv2.waitKey(0) == ord('q'):
+    if cv2.waitKey(1) == ord('q'):
         exit(0)
 
 def visualize_map(occupancy_map):
@@ -38,7 +38,7 @@ def visualize_map(occupancy_map):
     resized_map *= 255
     resized_map = resized_map.astype(np.uint8)
     cv2.imshow('map', resized_map)
-    if cv2.waitKey(0) == ord('q'):
+    if cv2.waitKey(1) == ord('q'):
         exit(0)
 
 
@@ -57,7 +57,7 @@ def visualize_timestep(occupancy_map, particles):
         cv2.circle(resized_map, (int(x[0] /10), int(x[1]/10 )), 1, (0, 0, 255), -1)
     
     cv2.imshow('map', resized_map)
-    if cv2.waitKey(0) == ord('q'):
+    if cv2.waitKey(1) == ord('q'):
         exit(0)
     
 
