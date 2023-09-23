@@ -114,11 +114,11 @@ if __name__ == '__main__':
     Initialize Parameters
     """
     parser = argparse.ArgumentParser()
-    np.random.seed(501)
+    # np.random.seed(501)
     parser.add_argument('--path_to_map', default='/home/praveenvnktsh/slam/data/map/wean.dat')
     parser.add_argument('--path_to_log', default='/home/praveenvnktsh/slam/data/log/robotdata1.log')
     parser.add_argument('--output', default='results')
-    parser.add_argument('--num_particles', default=10, type=int)
+    parser.add_argument('--num_particles', default=100, type=int)
     parser.add_argument('--visualize', action='store_true')
     args = parser.parse_args()
 
@@ -200,7 +200,7 @@ if __name__ == '__main__':
 
         # Note: this formulation is intuitive but not vectorized; looping in python is SLOW.
         # Vectorized version will receive a bonus. i.e., the functions take all particles as the input and process them in a vector.
-        
+        psum = 0
         for m in range(0, num_particles):
             """
             MOTION MODEL
@@ -214,13 +214,21 @@ if __name__ == '__main__':
             if (meas_type == "L"):
                 z_t = ranges
                 w_t, tvizmap = sensor_model.beam_range_finder_model(z_t, x_t1, tvizmap)
+                # print(w_t)
+                # psum += w_t
                 X_bar_new[m, :] = np.hstack((x_t1, w_t))
             else:
                 X_bar_new[m, :] = np.hstack((x_t1, X_bar[m, 3]))
-                
-        cv2.imshow('mapp', tvizmap)
-        if cv2.waitKey(1) == ord('q'):
-            exit()
+            # cv2.circle(vizmap, (int(x_t1[0] / 10), int(x_t1[1] / 10)), 5, (0, 255, 0), -1)
+            cv2.arrowedLine(tvizmap, (int(x_t0[0] / 10), int(x_t0[1] / 10)), (int(x_t1[0] / 10), int(x_t1[1] / 10)), (0, 255, 0), 3)
+        
+        # X_bar_new[:, 3] /= np.sum(X_bar_new[:, 3])
+        
+        if meas_type == 'L':
+            print(np.sum(X_bar_new[:, 3]))
+            cv2.imshow('mapp', tvizmap)
+            if cv2.waitKey(1) == ord('q'):
+                exit()
         # visualize_timestep(occupancy_map, X_bar_new)
         X_bar = X_bar_new
         u_t0 = u_t1
