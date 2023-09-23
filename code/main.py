@@ -114,11 +114,11 @@ if __name__ == '__main__':
     Initialize Parameters
     """
     parser = argparse.ArgumentParser()
-    np.random.seed(1000)
+    np.random.seed(501)
     parser.add_argument('--path_to_map', default='/home/praveenvnktsh/slam/data/map/wean.dat')
     parser.add_argument('--path_to_log', default='/home/praveenvnktsh/slam/data/log/robotdata1.log')
     parser.add_argument('--output', default='results')
-    parser.add_argument('--num_particles', default=1, type=int)
+    parser.add_argument('--num_particles', default=10, type=int)
     parser.add_argument('--visualize', action='store_true')
     args = parser.parse_args()
 
@@ -155,10 +155,17 @@ if __name__ == '__main__':
     # resized_map *= 255
     # resized_map = resized_map.astype(np.uint8)
     # resized_map = cv2.cvtColor(resized_map, cv2.COLOR_GRAY2BGR)
+    vizmap = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
+    vizmap -= np.min(vizmap)
+    vizmap /= np.max(vizmap)
+    vizmap *= 255
+    vizmap = vizmap.astype(np.uint8)
+    vizmap = cv2.cvtColor(vizmap, cv2.COLOR_GRAY2BGR)
     
     first_time_idx = True
     for time_idx, line in enumerate(logfile):
 
+        tvizmap = vizmap.copy()
         # Read a single 'line' from the log file (can be either odometry or laser measurement)
         # L : laser scan measurement, O : odometry measurement
         meas_type = line[0]
@@ -193,6 +200,7 @@ if __name__ == '__main__':
 
         # Note: this formulation is intuitive but not vectorized; looping in python is SLOW.
         # Vectorized version will receive a bonus. i.e., the functions take all particles as the input and process them in a vector.
+        
         for m in range(0, num_particles):
             """
             MOTION MODEL
@@ -205,12 +213,15 @@ if __name__ == '__main__':
             """
             if (meas_type == "L"):
                 z_t = ranges
-                w_t = sensor_model.beam_range_finder_model(z_t, x_t1)
+                w_t, tvizmap = sensor_model.beam_range_finder_model(z_t, x_t1, tvizmap)
                 X_bar_new[m, :] = np.hstack((x_t1, w_t))
             else:
                 X_bar_new[m, :] = np.hstack((x_t1, X_bar[m, 3]))
                 
-        visualize_timestep(occupancy_map, X_bar_new)
+        cv2.imshow('mapp', tvizmap)
+        if cv2.waitKey(1) == ord('q'):
+            exit()
+        # visualize_timestep(occupancy_map, X_bar_new)
         X_bar = X_bar_new
         u_t0 = u_t1
         """

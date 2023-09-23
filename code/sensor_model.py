@@ -38,59 +38,46 @@ class SensorModel:
         self._min_probability = 0.35
 
         # Used in sampling angles in ray casting
-        self._subsampling = 5
+        self._subsampling = 20
         self.occupancy_map = occupancy_map
         self.resolution = 10
         # print(self.occupancy_map.shape)
 
-    def beam_range_finder_model(self, z_t1_arr, x_t1):
+    def beam_range_finder_model(self, z_t1_arr, x_t1, vizmapog):
         """
         param[in] z_t1_arr : laser range readings [array of 180 values] at time t
         param[in] x_t1 : particle state belief [x, y, theta] at time t [world_frame]
         param[out] prob_zt1 : likelihood of a range scan zt1 at time t
         """
+        vizmap = vizmapog.copy()
         def raycast(occupancy_map, x, zs):
             theta = x[2] * 180 / np.pi
-            vizmap = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
-            vizmap -= np.min(vizmap)
-            vizmap /= np.max(vizmap)
-            vizmap *= 255
-            vizmap = vizmap.astype(np.uint8)
-            vizmap = cv2.cvtColor(vizmap, cv2.COLOR_GRAY2BGR)
+            
             true_measurements = []
             # for each beam
+            cv2.circle(vizmap, (int(x[0] / 10), int(x[1] / 10)), 5, (0, 255, 0), -1)
             for idx, angle in enumerate(np.linspace(theta - 90, theta + 90, len(zs))):
                 x_t = x[0]
                 y_t = x[1]
                 # print(self._max_range, )
-                for j in range(0, self._max_range, self.resolution):
+                for j in range(0, self._max_range + self.resolution, self.resolution):
                     x_t = x[0] + j * np.cos(angle * np.pi / 180)
                     y_t = x[1] + j * np.sin(angle * np.pi / 180)
-                    if x_t < 0 or x_t >= occupancy_map.shape[0] * 10 or y_t < 0 or y_t >= occupancy_map.shape[1] * 10:
-                        print("out of bounds")
-                        true_measurements.append(self._max_range)
+                    if x_t <= 0 or x_t >= occupancy_map.shape[0] * 10 or y_t <= 0 or y_t >= occupancy_map.shape[1] * 10:
                         break
                     if occupancy_map[int(y_t/10), int(x_t/10)] > self._min_probability:
-                        # return np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2)
-                        print("found measurement")
                         true_measurements.append(np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
                         break
-                    col = (occupancy_map[int(x_t/10), int(y_t/10)] + 1)/ np.max(occupancy_map)
-                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, int(col* 255) ), -1)
+                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, 255), -1)
                 if idx + 1 != len(true_measurements):
-                    print("something wrong")
-                cv2.imshow('maap', vizmap)
-                cv2.waitKey(1)
+                    true_measurements.append(self._max_range)
                     
             return true_measurements, vizmap
 
         q = 1
         z_t1_arr = z_t1_arr[::self._subsampling]
         z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
-        cv2.imshow('maap', vizmap)
-        print(len(z_true_ranges), len(z_t1_arr))
-        cv2.waitKey(1)
-        # print(np.linalg.norm(z_t1_arr - z_true_ranges))        
+
         
         for k in range(len(z_t1_arr)):
             z_measured = z_t1_arr[k]
@@ -111,4 +98,4 @@ class SensorModel:
             
             p = self._z_hit * p_hit + self._z_short * p_short + self._z_max * p_max + self._z_rand * p_rand
             q = q * p
-        return q
+        return q, vizmap
