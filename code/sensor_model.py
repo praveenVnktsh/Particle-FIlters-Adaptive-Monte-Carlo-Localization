@@ -59,7 +59,7 @@ class SensorModel:
             vizmap = cv2.cvtColor(vizmap, cv2.COLOR_GRAY2BGR)
             true_measurements = []
             # for each beam
-            for angle in np.linspace(theta - 90, theta + 90, len(zs)):
+            for idx, angle in enumerate(np.linspace(theta - 90, theta + 90, len(zs))):
                 x_t = x[0]
                 y_t = x[1]
                 # print(self._max_range, )
@@ -70,13 +70,17 @@ class SensorModel:
                         print("out of bounds")
                         true_measurements.append(self._max_range)
                         break
-                    if occupancy_map[int(x_t/10), int(y_t/10)] > self._min_probability:
+                    if occupancy_map[int(y_t/10), int(x_t/10)] > self._min_probability:
                         # return np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2)
                         print("found measurement")
                         true_measurements.append(np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
                         break
                     col = (occupancy_map[int(x_t/10), int(y_t/10)] + 1)/ np.max(occupancy_map)
-                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, int(255 - col* 255) ), -1)
+                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, int(col* 255) ), -1)
+                if idx + 1 != len(true_measurements):
+                    print("something wrong")
+                cv2.imshow('maap', vizmap)
+                cv2.waitKey(1)
                     
             return true_measurements, vizmap
 
@@ -85,7 +89,7 @@ class SensorModel:
         z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
         cv2.imshow('maap', vizmap)
         print(len(z_true_ranges), len(z_t1_arr))
-        cv2.waitKey(0)
+        cv2.waitKey(1)
         # print(np.linalg.norm(z_t1_arr - z_true_ranges))        
         
         for k in range(len(z_t1_arr)):
