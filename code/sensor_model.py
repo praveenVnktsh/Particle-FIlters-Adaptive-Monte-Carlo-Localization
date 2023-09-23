@@ -23,23 +23,24 @@ class SensorModel:
         TODO : Tune Sensor Model parameters here
         The original numbers are for reference but HAVE TO be tuned.
         """
-        # self._z_hit = 1
-        # self._z_short = 0.1
-        # self._z_max = 0.1
-        # self._z_rand = 100
-
-        self._z_hit = 150
-        self._z_short = 17.5
-        self._z_max = 15
+        self._z_hit = 1
+        self._z_short = 0.1
+        self._z_max = 0.1
         self._z_rand = 100
+
+        # self._z_hit = 2000
+        # self._z_short = 1750
+        # self._z_max = 8183
+        # self._z_rand = 100
+        
         self._sigma_hit = 100
         self._lambda_short = 15
 
-        # self._sigma_hit = 50
-        # self._lambda_short = 0.1
+        self._sigma_hit = 50
+        self._lambda_short = 0.1
 
         # Used in p_max and p_rand, optionally in ray casting
-        self._max_range = 8183 #/ 10
+        self._max_range = 8183
 
         # Used for thresholding obstacles of the occupancy map
         self._min_probability = 0.1
@@ -60,7 +61,7 @@ class SensorModel:
         def raycast(occupancy_map, x, zs):
             theta = x[2] * 180 / np.pi
 
-            true_measurements = np.zeros((len(zs), 1))
+            true_measurements = np.zeros((len(zs), ))
             # for each beam
 
             for idx, angle in enumerate(np.linspace(theta - 90, theta + 90, len(zs))):
@@ -92,22 +93,34 @@ class SensorModel:
         for k in range(len(z_t1_arr)):
             z_measured = z_t1_arr[k]
             z_true = z_true_ranges[k]
-            p_hit = norm.pdf(z_measured, loc = z_true, scale = self._sigma_hit)
-            if z_measured > self._z_max:
+            # print(z_true, z_measured)
+            # p_hit = norm.pdf(z_measured, loc = z_true, scale = self._sigma_hit)
+            if 0 <= z_measured <= self._max_range:
+                p_hit = np.exp((-1 / 2) * ((z_measured - z_true) ** 2) / (self._sigma_hit ** 2))
+                p_hit /= self._sigma_hit * np.sqrt(2 * np.pi)
+            else:
                 p_hit = 0
-
-            p_short = self._lambda_short * np.exp(-self._lambda_short * z_measured)
-            if z_measured > z_true:
+                
+                
+            if 0 <= z_measured <= z_true: 
+                eta = 1 / (1 - np.exp(-self._lambda_short * z_true))
+                p_short = eta * self._lambda_short * np.exp(-self._lambda_short * z_measured)
+            else:                
                 p_short = 0
 
 
-            p_max = (z_measured == self._max_range)
-            p_rand = (1 / self._max_range)
-            if z_measured > self._max_range:
+            if z_measured >= self._max_range:
+                p_max = self._max_range
+            else:
+                p_max = 0
+            
+            if 0 <= z_measured < self._max_range:
+                p_rand = (1 / self._max_range)
+            else:
                 p_rand = 0
 
             p = self._z_hit * p_hit + self._z_short * p_short + self._z_max * p_max + self._z_rand * p_rand
             p /= (self._z_hit + self._z_short + self._z_max + self._z_rand)
-            print(p)
+            print(p_hit, p_short, p_max, p_rand, p)
             q = q + np.log(p)
         return q, vizmap

@@ -38,7 +38,7 @@ class Resampling:
         TODO : Add your code here
         """
         X_bar[:, 3] = np.exp(X_bar[:, 3] - np.max(X_bar[:, 3]))
-        print(X_bar[:, 3])
+        # print(X_bar[:, 3])
         num_particles = np.shape(X_bar)[0]
         r1 = np.random.uniform(0, 1/num_particles)
         all_weights = X_bar[:,3]/np.sum(X_bar[:,3])
