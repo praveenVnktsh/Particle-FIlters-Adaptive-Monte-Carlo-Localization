@@ -32,14 +32,14 @@ class SensorModel:
         self._z_short = 17.5
         self._z_max = 15
         self._z_rand = 100
-        self._sigma_hit = 100
-        self._lambda_short = 15
+        self._sigma_hit = 100 #maybe 100-150
+        self._lambda_short = .1
 
         # self._sigma_hit = 50
         # self._lambda_short = 0.1
 
         # Used in p_max and p_rand, optionally in ray casting
-        self._max_range = 8183 #/ 10
+        self._max_range = 1000 #/ 10
 
         # Used for thresholding obstacles of the occupancy map
         self._min_probability = 0.1
@@ -78,27 +78,30 @@ class SensorModel:
                             or occupancy_map[int(y_t/10), int(x_t/10)] < 0:
                             true_measurements[idx] = (np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
                             break
-                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, 255), -1)
+                    # cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, 255), -1)
 
 
 
             return true_measurements, vizmap
 
         q = 0
+        # import pdb; pdb.set_trace()
         z_t1_arr = z_t1_arr[::self._subsampling]
         z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
 
 
         for k in range(len(z_t1_arr)):
             z_measured = z_t1_arr[k]
-            z_true = z_true_ranges[k]
+            z_true = z_true_ranges[k][0] #found big bug
             p_hit = norm.pdf(z_measured, loc = z_true, scale = self._sigma_hit)
-            if z_measured > self._z_max:
+            if z_measured > self._max_range:
                 p_hit = 0
 
             p_short = self._lambda_short * np.exp(-self._lambda_short * z_measured)
             if z_measured > z_true:
                 p_short = 0
+            # else:
+            #     import pdb; pdb.set_trace()
 
 
             p_max = (z_measured == self._max_range)
@@ -108,6 +111,9 @@ class SensorModel:
 
             p = self._z_hit * p_hit + self._z_short * p_short + self._z_max * p_max + self._z_rand * p_rand
             p /= (self._z_hit + self._z_short + self._z_max + self._z_rand)
-            print(p)
-            q = q + np.log(p)
+            q = p+np.log(p)
+        # import pdb; pdb.set_trace()
+        beams = len(z_t1_arr)
+        q = beams/np.abs(q)
+
         return q, vizmap
