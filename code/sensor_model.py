@@ -9,7 +9,7 @@ import math
 import time
 from matplotlib import pyplot as plt
 from scipy.stats import norm
-
+import cv2
 from map_reader import MapReader
 
 
@@ -51,7 +51,12 @@ class SensorModel:
         """
         def raycast(occupancy_map, x, zs):
             theta = x[2] * 180 / np.pi
-            
+            vizmap = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
+            vizmap -= np.min(vizmap)
+            vizmap /= np.max(vizmap)
+            vizmap *= 255
+            vizmap = vizmap.astype(np.uint8)
+            vizmap = cv2.cvtColor(vizmap, cv2.COLOR_GRAY2BGR)
             true_measurements = []
             # for each beam
             for angle in np.linspace(theta - 90, theta + 90, len(zs)):
@@ -69,11 +74,15 @@ class SensorModel:
                         true_measurements.append(np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
                         break
                     
-            return true_measurements
+                    cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 3, (0, 0, 255), -1)
+                    
+            return true_measurements, vizmap
 
         q = 1
         z_t1_arr = z_t1_arr[::self._subsampling]
-        z_true_ranges = raycast(self.occupancy_map, x_t1, z_t1_arr)
+        z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
+        cv2.imshow('maap', vizmap)
+        cv2.waitKey(0)
         
         # print(np.linalg.norm(z_t1_arr - z_true_ranges))        
         

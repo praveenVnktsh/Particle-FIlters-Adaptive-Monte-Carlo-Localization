@@ -19,10 +19,10 @@ class MotionModel:
         TODO : Tune Motion Model parameters here
         The original numbers are for reference but HAVE TO be tuned.
         """
-        self._alpha1 = 0.01
-        self._alpha2 = 0.01
-        self._alpha3 = 0.01
-        self._alpha4 = 0.01
+        self._alpha1 = 0.0
+        self._alpha2 = 0.0
+        self._alpha3 = 0.0
+        self._alpha4 = 0.0
 
 
     def update(self, u_t0, u_t1, x_t0):
@@ -32,6 +32,11 @@ class MotionModel:
         param[in] x_t0 : particle state belief [x, y, theta] at time (t-1) [world_frame]
         param[out] x_t1 : particle state belief [x, y, theta] at time t [world_frame]
         """
+        
+        if np.all(u_t0 == u_t1):
+            return x_t0
+        
+        
         x1, y1, theta1 = u_t0
         x2, y2, theta2 = u_t1
         

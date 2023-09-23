@@ -25,7 +25,7 @@ def viz_map_particles(occupancy_map, x):
     resized_map *= 255
     resized_map = resized_map.astype(np.uint8)
     for xx in x:
-        cv2.circle(resized_map, (int(xx[0] ), int(xx[1] )), 2, (0, 0, 255), -1)
+        cv2.circle(resized_map, (int(xx[0]/10 ), int(xx[1]/10 )), 2, (0, 0, 255), -1)
     cv2.imshow('map', resized_map)
     if cv2.waitKey(0) == ord('q'):
         exit(0)
@@ -40,13 +40,11 @@ def visualize_map(occupancy_map):
     cv2.imshow('map', resized_map)
     if cv2.waitKey(0) == ord('q'):
         exit(0)
-    # plt.ion()
-    # plt.imshow(occupancy_map, cmap='Greys')
-    # plt.show()
-    # plt.axis([0, 800, 0, 800])
+
 
 
 def visualize_timestep(occupancy_map, particles):
+    # global resized_map
     resized_map = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
     resized_map -= np.min(resized_map)
     resized_map /= np.max(resized_map)
@@ -56,7 +54,8 @@ def visualize_timestep(occupancy_map, particles):
     
     for x in particles:
         print(x)
-        cv2.circle(resized_map, (int(x[0] ), int(x[1] )), 10, (0, 0, 255), -1)
+        cv2.circle(resized_map, (int(x[0] /10), int(x[1]/10 )), 1, (0, 0, 255), -1)
+    
     cv2.imshow('map', resized_map)
     if cv2.waitKey(0) == ord('q'):
         exit(0)
@@ -88,8 +87,8 @@ def init_particles_freespace(num_particles, occupancy_map):
     # print(np.min(occupancy_map), np.max(occupancy_map))
     y, x = np.where(occupancy_map == 0)
     chosen_indices = np.random.choice(len(x), num_particles)
-    x0_vals = x[chosen_indices].reshape(-1, 1)
-    y0_vals = y[chosen_indices].reshape(-1, 1)
+    x0_vals = x[chosen_indices].reshape(-1, 1) * 10
+    y0_vals = y[chosen_indices].reshape(-1, 1) * 10
     
     theta0_vals = np.random.uniform(-3.14, 3.14, (num_particles, 1))
 
@@ -118,7 +117,7 @@ if __name__ == '__main__':
     parser.add_argument('--path_to_map', default='../data/map/wean.dat')
     parser.add_argument('--path_to_log', default='../data/log/robotdata1.log')
     parser.add_argument('--output', default='results')
-    parser.add_argument('--num_particles', default=10, type=int)
+    parser.add_argument('--num_particles', default=1, type=int)
     parser.add_argument('--visualize', action='store_true')
     args = parser.parse_args()
 
@@ -136,18 +135,26 @@ if __name__ == '__main__':
 
     num_particles = args.num_particles
     # X_bar = init_particles_random(num_particles, occupancy_map)
-    # print(map_obj.get_map_size_x(), map_obj.get_map_size_y()    )
+    # print(map_obj.get_map_size_x(), map_obj.get_map_size_y())
     X_bar = init_particles_freespace(num_particles, occupancy_map)
-    # print(occupancy_map.shape)
-    # exit()
+
     # viz_map_particles(occupancy_map, X_bar)
-    visualize_timestep(occupancy_map, X_bar)
+    # visualize_timestep(occupancy_map, X_bar)
     """
     Monte Carlo Localization Algorithm : Main Loop
     """
     if args.visualize:
         visualize_map(occupancy_map)
 
+
+    # resized_map = occupancy_map.copy()
+    # resized_map = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
+    # resized_map -= np.min(resized_map)
+    # resized_map /= np.max(resized_map)
+    # resized_map *= 255
+    # resized_map = resized_map.astype(np.uint8)
+    # resized_map = cv2.cvtColor(resized_map, cv2.COLOR_GRAY2BGR)
+    
     first_time_idx = True
     for time_idx, line in enumerate(logfile):
 
@@ -191,7 +198,7 @@ if __name__ == '__main__':
             """
             x_t0 = X_bar[m, 0:3]
             x_t1 = motion_model.update(u_t0, u_t1, x_t0)
-
+            # X_bar_new[m:, :3] = x_t1
             """
             SENSOR MODEL
             """
@@ -202,13 +209,13 @@ if __name__ == '__main__':
             else:
                 X_bar_new[m, :] = np.hstack((x_t1, X_bar[m, 3]))
                 
-        # visualize_timestep(occupancy_map, X_bar_new)
+        visualize_timestep(occupancy_map, X_bar_new)
         X_bar = X_bar_new
         u_t0 = u_t1
         """
         RESAMPLING
         """
-        # X_bar = resampler.low_variance_sampler(X_bar)
+        X_bar = resampler.low_variance_sampler(X_bar)
 
         if args.visualize:
             visualize_timestep(X_bar, time_idx, args.output)
