@@ -42,13 +42,47 @@ class SensorModel:
         self.resolution = 10
         # print(self.occupancy_map.shape)
 
-    def beam_range_finder_model(self, z_t1_arr, x_t1, vizmapog):
+    def beam_range_finder_model(self, z_t1_arr, x_t1, vizmapog, dtransform):
         """
         param[in] z_t1_arr : laser range readings [array of 180 values] at time t
         param[in] x_t1 : particle state belief [x, y, theta] at time t [world_frame]
         param[out] prob_zt1 : likelihood of a range scan zt1 at time t
         """
         vizmap = vizmapog.copy()
+        
+        # dtransform -= dtransform.min()
+        # dtransform /= dtransform.max()
+        # cv2.imshow("dtransform", dtransform)
+        # cv2.waitKey(0)
+        
+        def sphere_trace(occupancy_map, x, zs):
+            theta = x[2] * 180 / np.pi
+            x_t = x[0]
+            y_t = x[1]
+            true_measurements = np.zeros((len(zs), ))
+            for idx, angle in enumerate(np.linspace(theta - 90, theta + 90, len(zs))):
+                x_t = x[0]
+                y_t = x[1]
+                while np.linalg.norm(np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2)) < self._max_range :
+                    x_t += dtransform[int(y_t/10), int(x_t/10)] * np.cos(angle * np.pi / 180)
+                    y_t += dtransform[int(y_t/10), int(x_t/10)] * np.sin(angle * np.pi / 180)
+                    if x_t <= 0 or x_t >= occupancy_map.shape[1] * 10 or y_t <= 0 or y_t >= occupancy_map.shape[0] * 10:
+                        break
+                    elif occupancy_map[int(y_t/10), int(x_t/10)] > self._min_probability \
+                            or occupancy_map[int(y_t/10), int(x_t/10)] < 0:
+                        true_measurements[idx] = (np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
+                        # print(true_measurements[idx])
+                        cv2.line(vizmap, (int(x[0] / 10), int(x[1] / 10)), (int(x_t / 10), int(y_t / 10)), (0, 0, 255), 1)
+                        break
+
+            
+            # cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, 255), -1)
+
+            return true_measurements, vizmap
+        
+        
+        # exit()
+        
         def raycast(occupancy_map, x, zs):
             theta = x[2] * 180 / np.pi
 
@@ -79,7 +113,7 @@ class SensorModel:
         q = 0.
         # import pdb; pdb.set_trace()
         z_t1_arr = z_t1_arr[::self._subsampling]
-        z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
+        z_true_ranges, vizmap = sphere_trace(self.occupancy_map, x_t1, z_t1_arr)
 
 
         for k in range(len(z_t1_arr)):
@@ -115,7 +149,7 @@ class SensorModel:
                 p_rand = (1 / self._max_range)
             else:
                 p_rand = 0
-            import pdb; pdb.set_trace()
+            # import pdb; pdb.set_trace()
             p = self._z_hit * p_hit + self._z_short * p_short + self._z_max * p_max + self._z_rand * p_rand
             p /= (self._z_hit + self._z_short + self._z_max + self._z_rand)
             q += np.log(p)

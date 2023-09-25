@@ -147,6 +147,14 @@ if __name__ == '__main__':
     if args.visualize:
         visualize_map(occupancy_map)
 
+    thresholded = occupancy_map.copy()
+    thresholded[thresholded >= 0] = 1
+    thresholded[thresholded < 0] = 0
+    
+    thresholded *= 255
+    thresholded = thresholded.astype(np.uint8)
+    
+    dtransform = cv2.distanceTransform(thresholded, cv2.DIST_L2, 3)
 
     # resized_map = occupancy_map.copy()
     # resized_map = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
@@ -187,8 +195,8 @@ if __name__ == '__main__':
             # 180 range measurement values from single laser scan
             ranges = meas_vals[6:-1]
 
-        print("Processing time step {} at time {}s".format(
-            time_idx, time_stamp))
+        print("Processing time step {} at time {}s. Measurement type = {}".format(
+            time_idx, round(time_stamp, 2), meas_type))
 
         if first_time_idx:
             u_t0 = odometry_robot
@@ -213,7 +221,7 @@ if __name__ == '__main__':
             """
             if (meas_type == "L"):
                 z_t = ranges
-                w_t, tvizmap = sensor_model.beam_range_finder_model(z_t, x_t1, tvizmap)
+                w_t, tvizmap = sensor_model.beam_range_finder_model(z_t, x_t1, tvizmap, dtransform)
                 # print(w_t)
                 # psum += w_t
                 X_bar_new[m, :] = np.hstack((x_t1, w_t))
