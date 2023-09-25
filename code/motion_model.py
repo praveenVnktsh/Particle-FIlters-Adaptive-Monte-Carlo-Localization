@@ -19,10 +19,10 @@ class MotionModel:
         TODO : Tune Motion Model parameters here
         The original numbers are for reference but HAVE TO be tuned.
         """
-        self._alpha1 = 0.0005
-        self._alpha2 = 0.0005
-        self._alpha3 = 0.001
-        self._alpha4 = 0.001
+        self._alpha1 = 0.00001
+        self._alpha2 = 0.00001
+        self._alpha3 = 0.0001
+        self._alpha4 = 0.0001
 
 
     def update(self, u_t0, u_t1, x_t0):
@@ -46,14 +46,16 @@ class MotionModel:
         
         
         delta_hat_rot_1 = delta_rot_1 - np.random.normal(0, self._alpha1 * np.power(delta_rot_1, 2) + self._alpha2 * np.power(delta_trans, 2))
-        delta_hat_trans = delta_trans - np.random.normal(0, self._alpha3 * np.power(delta_trans, 2) + self._alpha4 * np.power(delta_rot_1, 2) + np.power(delta_rot_2, 2))
+        delta_hat_trans = delta_trans - np.random.normal(0, self._alpha3 * np.power(delta_trans, 2) + self._alpha4 * (np.power(delta_rot_1, 2) + np.power(delta_rot_2, 2)))
         delta_hat_rot_2 = delta_rot_2 - np.random.normal(0, self._alpha1 * np.power(delta_rot_2, 2) + self._alpha2 * np.power(delta_trans, 2))
         
         
         x_t1 = np.array(x_t0) + np.array([
             delta_hat_trans * np.cos(x_t0[2] + delta_hat_rot_1),
             delta_hat_trans * np.sin(x_t0[2] + delta_hat_rot_1),
-            delta_hat_rot_1 + delta_hat_rot_2
+            angleWrap(delta_hat_rot_1 + delta_hat_rot_2)
         ])
         return list(x_t1)
         
+def angleWrap(theta):
+    return theta-2*np.pi*np.floor((theta+np.pi)/(2*np.pi))

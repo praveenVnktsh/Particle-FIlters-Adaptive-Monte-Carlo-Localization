@@ -26,12 +26,9 @@ class SensorModel:
         self._z_hit = 1
         self._z_short = 0.1
         self._z_max = 0.1
-        self._z_rand = 100
+        self._z_rand = 1000
         self._sigma_hit = 100 #maybe 100-150
         self._lambda_short = .15
-
-        self._sigma_hit = 50
-        self._lambda_short = 0.1
 
         # Used in p_max and p_rand, optionally in ray casting
         self._max_range = 8183
@@ -91,8 +88,11 @@ class SensorModel:
             # print(z_true, z_measured)
             # p_hit = norm.pdf(z_measured, loc = z_true, scale = self._sigma_hit)
             if 0 <= z_measured <= self._max_range:
+                eta = norm.cdf(z_measured, loc = z_true, scale = self._sigma_hit) - \
+                norm.cdf(0., loc = z_true, scale = self._sigma_hit)
                 p_hit = np.exp((-1 / 2) * ((z_measured - z_true) ** 2) / (self._sigma_hit ** 2))
                 p_hit /= self._sigma_hit * np.sqrt(2 * np.pi)
+                p_hit /= eta
             else:
                 p_hit = 0
                 
@@ -107,7 +107,7 @@ class SensorModel:
 
 
             if z_measured >= self._max_range:
-                p_max = self._max_range
+                p_max = 1.
             else:
                 p_max = 0
             
@@ -115,7 +115,7 @@ class SensorModel:
                 p_rand = (1 / self._max_range)
             else:
                 p_rand = 0
-            # import pdb; pdb.set_trace()
+            import pdb; pdb.set_trace()
             p = self._z_hit * p_hit + self._z_short * p_short + self._z_max * p_max + self._z_rand * p_rand
             p /= (self._z_hit + self._z_short + self._z_max + self._z_rand)
             q += np.log(p)
