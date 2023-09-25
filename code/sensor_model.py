@@ -33,7 +33,7 @@ class SensorModel:
         self._z_max = 15
         self._z_rand = 100
         self._sigma_hit = 100 #maybe 100-150
-        self._lambda_short = .1
+        self._lambda_short = .15
 
         # self._sigma_hit = 50
         # self._lambda_short = 0.1
@@ -84,7 +84,7 @@ class SensorModel:
 
             return true_measurements, vizmap
 
-        q = 0
+        q = 0.
         # import pdb; pdb.set_trace()
         z_t1_arr = z_t1_arr[::self._subsampling]
         z_true_ranges, vizmap = raycast(self.occupancy_map, x_t1, z_t1_arr)
@@ -111,9 +111,15 @@ class SensorModel:
 
             p = self._z_hit * p_hit + self._z_short * p_short + self._z_max * p_max + self._z_rand * p_rand
             p /= (self._z_hit + self._z_short + self._z_max + self._z_rand)
-            q = p+np.log(p)
+            q = q+np.log(p)
         # import pdb; pdb.set_trace()
         beams = len(z_t1_arr)
         q = beams/np.abs(q)
+        this_x = int(x_t1[0]/10.0)
+        this_y = int(x_t1[1]/10.0)
+        map_value = self.occupancy_map[this_y,this_x]
+        if map_value<0. or map_value>self._min_probability:
+            q=0
+        
 
         return q, vizmap
