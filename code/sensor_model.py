@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 from scipy.stats import norm
 import cv2
 from map_reader import MapReader
-
+from numba import jit
 
 class SensorModel:
     """
@@ -41,7 +41,7 @@ class SensorModel:
         self.occupancy_map = occupancy_map
         self.resolution = 10
         # print(self.occupancy_map.shape)
-
+    
     def beam_range_finder_model(self, z_t1_arr, x_t1, vizmapog, dtransform):
         """
         param[in] z_t1_arr : laser range readings [array of 180 values] at time t
@@ -76,13 +76,12 @@ class SensorModel:
                         break
 
             
-            # cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, 255), -1)
 
             return true_measurements, vizmap
         
         
         # exit()
-        
+        @jit(nopython=True)
         def raycast(occupancy_map, x, zs):
             theta = x[2] * 180 / np.pi
 
@@ -92,22 +91,14 @@ class SensorModel:
             for idx, angle in enumerate(np.linspace(theta - 90, theta + 90, len(zs))):
                 x_t = x[0]
                 y_t = x[1]
-                # print(self._max_range, )
                 for  dist in (range(0, self._max_range + self.resolution, self.resolution)):
                     x_t = x[0] + dist * np.cos(angle * np.pi / 180)
                     y_t = x[1] + dist * np.sin(angle * np.pi / 180)
-                    # if x_t <= 0 or x_t >= occupancy_map.shape[1] * 10 or y_t <= 0 or y_t >= occupancy_map.shape[0] * 10:
-                    #     break
-
                     if x_t > 0 and x_t < occupancy_map.shape[1] * 10 and y_t > 0 and y_t < occupancy_map.shape[0] * 10:
                         if occupancy_map[int(y_t/10), int(x_t/10)] > self._min_probability \
                             or occupancy_map[int(y_t/10), int(x_t/10)] < 0:
                             true_measurements[idx] = (np.sqrt((x_t - x[0]) ** 2 + (y_t - x[1]) ** 2))
                             break
-                    # cv2.circle(vizmap, (int(x_t / 10), int(y_t / 10)), 1, (0, 0, 255), -1)
-
-
-
             return true_measurements, vizmap
 
         q = 0.

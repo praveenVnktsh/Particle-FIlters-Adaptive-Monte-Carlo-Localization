@@ -1,0 +1,2052 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      The system is: Linux - 5.15.90.1-microsoft-standard-WSL2 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/3.27.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/3.27.4/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:117 (enable_language)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_09cf4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_09cf4.dir/build.make CMakeFiles/cmTC_09cf4.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh'
+        Building CXX object CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -fPIE   -v -o CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o -c /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_09cf4.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_09cf4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fPIE -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccoPBPbS.s
+        GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/include/c++/11
+         /usr/include/x86_64-linux-gnu/c++/11
+         /usr/include/c++/11/backward
+         /usr/lib/gcc/x86_64-linux-gnu/11/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_09cf4.dir/'
+         as -v --64 -o CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccoPBPbS.s
+        GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_09cf4
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09cf4.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_09cf4 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09cf4' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_09cf4.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEsfDiH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_09cf4 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09cf4' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_09cf4.'
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/include/c++/11]
+          add: [/usr/include/x86_64-linux-gnu/c++/11]
+          add: [/usr/include/c++/11/backward]
+          add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
+        collapse include dir [/usr/include/x86_64-linux-gnu/c++/11] ==> [/usr/include/x86_64-linux-gnu/c++/11]
+        collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/11;/usr/include/x86_64-linux-gnu/c++/11;/usr/include/c++/11/backward;/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_09cf4/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_09cf4.dir/build.make CMakeFiles/cmTC_09cf4.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-9LV9Hh']
+        ignore line: [Building CXX object CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -fPIE   -v -o CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o -c /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_09cf4.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_09cf4.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fPIE -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccoPBPbS.s]
+        ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/include/c++/11]
+        ignore line: [ /usr/include/x86_64-linux-gnu/c++/11]
+        ignore line: [ /usr/include/c++/11/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_09cf4.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccoPBPbS.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_09cf4]
+        ignore line: [/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09cf4.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_09cf4 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_09cf4' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_09cf4.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEsfDiH.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_09cf4 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccEsfDiH.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_09cf4] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
+          arg [CMakeFiles/cmTC_09cf4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:117 (enable_language)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4fb60/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4fb60.dir/build.make CMakeFiles/cmTC_4fb60.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp'
+        Building C object CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -fPIE   -v -o CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o -c /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4fb60.dir/'
+         /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4fb60.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fPIE -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccRHUy7m.s
+        GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/11/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 50eaa2331df977b8016186198deb2d18
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4fb60.dir/'
+         as -v --64 -o CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o /tmp/ccRHUy7m.s
+        GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_4fb60
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4fb60.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o -o cmTC_4fb60 
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4fb60' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4fb60.'
+         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0aq9uI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_4fb60 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4fb60' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4fb60.'
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:117 (enable_language)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4fb60/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_4fb60.dir/build.make CMakeFiles/cmTC_4fb60.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeScratch/TryCompile-KU0PPp']
+        ignore line: [Building C object CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -fPIE   -v -o CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o -c /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4fb60.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_4fb60.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fPIE -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccRHUy7m.s]
+        ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 50eaa2331df977b8016186198deb2d18]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4fb60.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o /tmp/ccRHUy7m.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fPIE' '-v' '-o' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_4fb60]
+        ignore line: [/home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4fb60.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o -o cmTC_4fb60 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_4fb60' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_4fb60.']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0aq9uI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_4fb60 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc0aq9uI.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-znow] ==> ignore
+          arg [-zrelro] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_4fb60] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
+          arg [CMakeFiles/cmTC_4fb60.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:89 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_FSIGNED_CHAR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_902dc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_902dc.dir/build.make CMakeFiles/cmTC_902dc.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_902dc.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE     -fsigned-char -o CMakeFiles/cmTC_902dc.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        Linking CXX executable cmTC_902dc
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_902dc.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_902dc.dir/src.cxx.o -o cmTC_902dc 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:89 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_FSIGNED_CHAR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6eb50/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6eb50.dir/build.make CMakeFiles/cmTC_6eb50.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_6eb50.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE     -fsigned-char -o CMakeFiles/cmTC_6eb50.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        Linking C executable cmTC_6eb50
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6eb50.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_6eb50.dir/src.c.o -o cmTC_6eb50 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:130 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_W"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_eef9a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_eef9a.dir/build.make CMakeFiles/cmTC_eef9a.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_eef9a.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char  -W -o CMakeFiles/cmTC_eef9a.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        Linking CXX executable cmTC_eef9a
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eef9a.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_eef9a.dir/src.cxx.o -o cmTC_eef9a 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:130 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_W"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9e107/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9e107.dir/build.make CMakeFiles/cmTC_9e107.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_9e107.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char  -W -o CMakeFiles/cmTC_9e107.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        Linking C executable cmTC_9e107
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e107.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_9e107.dir/src.c.o -o cmTC_9e107 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:134 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dc714/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dc714.dir/build.make CMakeFiles/cmTC_dc714.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_dc714.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W  -Wall -o CMakeFiles/cmTC_dc714.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_dc714
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dc714.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_dc714.dir/src.cxx.o -o cmTC_dc714 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:134 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b3389/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b3389.dir/build.make CMakeFiles/cmTC_b3389.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_b3389.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W  -Wall -o CMakeFiles/cmTC_b3389.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_b3389
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3389.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_b3389.dir/src.c.o -o cmTC_b3389 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:136 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WRETURN_TYPE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_471ef/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_471ef.dir/build.make CMakeFiles/cmTC_471ef.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_471ef.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall  -Wreturn-type -o CMakeFiles/cmTC_471ef.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_471ef
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_471ef.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_471ef.dir/src.cxx.o -o cmTC_471ef 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:136 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WRETURN_TYPE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a99f1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a99f1.dir/build.make CMakeFiles/cmTC_a99f1.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_a99f1.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall  -Wreturn-type -o CMakeFiles/cmTC_a99f1.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_a99f1
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a99f1.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_a99f1.dir/src.c.o -o cmTC_a99f1 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:137 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WNON_VIRTUAL_DTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_70b19/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_70b19.dir/build.make CMakeFiles/cmTC_70b19.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_70b19.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type  -Wnon-virtual-dtor -o CMakeFiles/cmTC_70b19.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_70b19
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70b19.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_70b19.dir/src.cxx.o -o cmTC_70b19 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:137 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WNON_VIRTUAL_DTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ca111/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ca111.dir/build.make CMakeFiles/cmTC_ca111.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_ca111.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type  -Wnon-virtual-dtor -o CMakeFiles/cmTC_ca111.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        cc1: warning: command-line option ‘-Wnon-virtual-dtor’ is valid for C++/ObjC++ but not for C
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_ca111
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca111.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_ca111.dir/src.c.o -o cmTC_ca111 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:138 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WADDRESS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ca3b4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ca3b4.dir/build.make CMakeFiles/cmTC_ca3b4.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_ca3b4.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor  -Waddress -o CMakeFiles/cmTC_ca3b4.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_ca3b4
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ca3b4.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_ca3b4.dir/src.cxx.o -o cmTC_ca3b4 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:138 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WADDRESS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a435b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a435b.dir/build.make CMakeFiles/cmTC_a435b.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_a435b.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type  -Waddress -o CMakeFiles/cmTC_a435b.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_a435b
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a435b.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_a435b.dir/src.c.o -o cmTC_a435b 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:139 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WSEQUENCE_POINT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6761e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6761e.dir/build.make CMakeFiles/cmTC_6761e.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_6761e.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress  -Wsequence-point -o CMakeFiles/cmTC_6761e.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_6761e
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6761e.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_6761e.dir/src.cxx.o -o cmTC_6761e 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:139 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WSEQUENCE_POINT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_41fe3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_41fe3.dir/build.make CMakeFiles/cmTC_41fe3.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_41fe3.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress  -Wsequence-point -o CMakeFiles/cmTC_41fe3.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_41fe3
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41fe3.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_41fe3.dir/src.c.o -o cmTC_41fe3 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:140 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WFORMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_410d1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_410d1.dir/build.make CMakeFiles/cmTC_410d1.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_410d1.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point  -Wformat -o CMakeFiles/cmTC_410d1.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_410d1
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_410d1.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_410d1.dir/src.cxx.o -o cmTC_410d1 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:140 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WFORMAT"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7ea52/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7ea52.dir/build.make CMakeFiles/cmTC_7ea52.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_7ea52.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point  -Wformat -o CMakeFiles/cmTC_7ea52.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_7ea52
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ea52.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_7ea52.dir/src.c.o -o cmTC_7ea52 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:141 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WFORMAT_SECURITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1ae40/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1ae40.dir/build.make CMakeFiles/cmTC_1ae40.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_1ae40.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat -Wformat-security -o CMakeFiles/cmTC_1ae40.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_1ae40
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ae40.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_1ae40.dir/src.cxx.o -o cmTC_1ae40 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:141 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WFORMAT_SECURITY"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_727f2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_727f2.dir/build.make CMakeFiles/cmTC_727f2.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_727f2.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat -Wformat-security -o CMakeFiles/cmTC_727f2.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_727f2
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_727f2.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_727f2.dir/src.c.o -o cmTC_727f2 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:142 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WMISSING_DECLARATIONS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_50136/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_50136.dir/build.make CMakeFiles/cmTC_50136.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_50136.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security  -Wmissing-declarations -o CMakeFiles/cmTC_50136.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_50136
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50136.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_50136.dir/src.cxx.o -o cmTC_50136 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:142 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WMISSING_DECLARATIONS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b3c6c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b3c6c.dir/build.make CMakeFiles/cmTC_b3c6c.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_b3c6c.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security  -Wmissing-declarations -o CMakeFiles/cmTC_b3c6c.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_b3c6c
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3c6c.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_b3c6c.dir/src.c.o -o cmTC_b3c6c 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:143 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WMISSING_PROTOTYPES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_64113/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_64113.dir/build.make CMakeFiles/cmTC_64113.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_64113.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wmissing-prototypes -o CMakeFiles/cmTC_64113.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        cc1plus: warning: command-line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_64113
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64113.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_64113.dir/src.cxx.o -o cmTC_64113 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:143 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WMISSING_PROTOTYPES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c698c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c698c.dir/build.make CMakeFiles/cmTC_c698c.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_c698c.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wmissing-prototypes -o CMakeFiles/cmTC_c698c.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_c698c
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c698c.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_c698c.dir/src.c.o -o cmTC_c698c 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:144 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WSTRICT_PROTOTYPES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_57199/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_57199.dir/build.make CMakeFiles/cmTC_57199.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_57199.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wstrict-prototypes -o CMakeFiles/cmTC_57199.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        cc1plus: warning: command-line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_57199
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57199.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_57199.dir/src.cxx.o -o cmTC_57199 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:144 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WSTRICT_PROTOTYPES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_05049/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_05049.dir/build.make CMakeFiles/cmTC_05049.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_05049.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes  -Wstrict-prototypes -o CMakeFiles/cmTC_05049.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_05049
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_05049.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_05049.dir/src.c.o -o cmTC_05049 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:145 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WUNDEF"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_eedb2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_eedb2.dir/build.make CMakeFiles/cmTC_eedb2.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_eedb2.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations  -Wundef -o CMakeFiles/cmTC_eedb2.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_eedb2
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eedb2.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_eedb2.dir/src.cxx.o -o cmTC_eedb2 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:145 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WUNDEF"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e93b5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e93b5.dir/build.make CMakeFiles/cmTC_e93b5.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_e93b5.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes  -Wundef -o CMakeFiles/cmTC_e93b5.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_e93b5
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e93b5.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_e93b5.dir/src.c.o -o cmTC_e93b5 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:146 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WINIT_SELF"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0425e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0425e.dir/build.make CMakeFiles/cmTC_0425e.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0425e.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef  -Winit-self -o CMakeFiles/cmTC_0425e.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_0425e
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0425e.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_0425e.dir/src.cxx.o -o cmTC_0425e 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:146 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WINIT_SELF"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7143d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7143d.dir/build.make CMakeFiles/cmTC_7143d.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_7143d.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef  -Winit-self -o CMakeFiles/cmTC_7143d.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_7143d
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7143d.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_7143d.dir/src.c.o -o cmTC_7143d 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:147 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WPOINTER_ARITH"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0d832/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0d832.dir/build.make CMakeFiles/cmTC_0d832.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_0d832.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self  -Wpointer-arith -o CMakeFiles/cmTC_0d832.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_0d832
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d832.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_0d832.dir/src.cxx.o -o cmTC_0d832 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:147 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WPOINTER_ARITH"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8b3a0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8b3a0.dir/build.make CMakeFiles/cmTC_8b3a0.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_8b3a0.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self  -Wpointer-arith -o CMakeFiles/cmTC_8b3a0.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_8b3a0
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b3a0.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_8b3a0.dir/src.c.o -o cmTC_8b3a0 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:149 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WSHADOW"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_db61d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_db61d.dir/build.make CMakeFiles/cmTC_db61d.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_db61d.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith  -Wshadow -o CMakeFiles/cmTC_db61d.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_db61d
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db61d.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_db61d.dir/src.cxx.o -o cmTC_db61d 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:149 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WSHADOW"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_58e9b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_58e9b.dir/build.make CMakeFiles/cmTC_58e9b.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_58e9b.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wshadow -o CMakeFiles/cmTC_58e9b.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_58e9b
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58e9b.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_58e9b.dir/src.c.o -o cmTC_58e9b 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:151 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WSIGN_PROMO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_55616/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_55616.dir/build.make CMakeFiles/cmTC_55616.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_55616.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo -o CMakeFiles/cmTC_55616.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_55616
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55616.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_55616.dir/src.cxx.o -o cmTC_55616 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:151 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WSIGN_PROMO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fa168/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fa168.dir/build.make CMakeFiles/cmTC_fa168.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_fa168.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo -o CMakeFiles/cmTC_fa168.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        cc1: warning: command-line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_fa168
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa168.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_fa168.dir/src.c.o -o cmTC_fa168 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:152 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WUNINITIALIZED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_293fa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_293fa.dir/build.make CMakeFiles/cmTC_293fa.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_293fa.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo  -Wuninitialized -o CMakeFiles/cmTC_293fa.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_293fa
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_293fa.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_293fa.dir/src.cxx.o -o cmTC_293fa 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:152 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WUNINITIALIZED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_add20/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_add20.dir/build.make CMakeFiles/cmTC_add20.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_add20.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wuninitialized -o CMakeFiles/cmTC_add20.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_add20
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_add20.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_add20.dir/src.c.o -o cmTC_add20 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:158 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WSUGGEST_OVERRIDE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_26646/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_26646.dir/build.make CMakeFiles/cmTC_26646.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_26646.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized  -Wsuggest-override -o CMakeFiles/cmTC_26646.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_26646
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26646.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_26646.dir/src.cxx.o -o cmTC_26646 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:158 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WSUGGEST_OVERRIDE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3da87/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3da87.dir/build.make CMakeFiles/cmTC_3da87.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_3da87.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wsuggest-override -o CMakeFiles/cmTC_3da87.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        cc1: warning: command-line option ‘-Wsuggest-override’ is valid for C++/ObjC++ but not for C
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_3da87
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3da87.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_3da87.dir/src.c.o -o cmTC_3da87 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:168 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WNO_DELETE_NON_VIRTUAL_DTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7840c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7840c.dir/build.make CMakeFiles/cmTC_7840c.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_7840c.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override  -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_7840c.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking CXX executable cmTC_7840c
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7840c.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_7840c.dir/src.cxx.o -o cmTC_7840c 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:168 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WNO_DELETE_NON_VIRTUAL_DTOR"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d6c8a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d6c8a.dir/build.make CMakeFiles/cmTC_d6c8a.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_d6c8a.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_d6c8a.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        cc1: warning: command-line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        Linking C executable cmTC_d6c8a
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6c8a.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_d6c8a.dir/src.c.o -o cmTC_d6c8a 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:58 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:169 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_CXX_WNO_UNNAMED_TYPE_TEMPLATE_ARGS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_27483/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_27483.dir/build.make CMakeFiles/cmTC_27483.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_27483.dir/src.cxx.o
+        /usr/bin/c++   -O3 -DNDEBUG -std=c++11 -fPIE    -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_27483.dir/src.cxx.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.cxx:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        cc1plus: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics
+        Linking CXX executable cmTC_27483
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27483.dir/link.txt --verbose=1
+        /usr/bin/c++ -O3 -DNDEBUG CMakeFiles/cmTC_27483.dir/src.cxx.o -o cmTC_27483 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "cmake/OpenCVUtils.cmake:509 (TRY_COMPILE)"
+      - "cmake/OpenCVUtils.cmake:581 (ocv_check_compiler_flag)"
+      - "cmake/OpenCVCompilerOptions.cmake:63 (ocv_check_flag_support)"
+      - "cmake/OpenCVCompilerOptions.cmake:169 (add_extra_compiler_option)"
+      - "CMakeLists.txt:653 (include)"
+    directories:
+      source: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+      binary: "/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_RELEASE: "-O3 -DNDEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_C_WNO_UNNAMED_TYPE_TEMPLATE_ARGS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f96b8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f96b8.dir/build.make CMakeFiles/cmTC_f96b8.dir/build
+        gmake[1]: Entering directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_f96b8.dir/src.c.o
+        /usr/bin/cc   -O3 -DNDEBUG -fPIE    -fsigned-char -W -Wall -Wreturn-type -Waddress -Wsequence-point -Wformat -Wformat-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized  -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_f96b8.dir/src.c.o -c /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c
+        /home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp/src.c:1: warning: ignoring ‘#pragma  ’ [-Wunknown-pragmas]
+            1 | #pragma
+              | 
+        cc1: note: unrecognized command-line option ‘-Wno-unnamed-type-template-args’ may have been intended to silence earlier diagnostics
+        Linking C executable cmTC_f96b8
+        /home/praveenvnktsh/.local/lib/python3.10/site-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f96b8.dir/link.txt --verbose=1
+        /usr/bin/cc -O3 -DNDEBUG CMakeFiles/cmTC_f96b8.dir/src.c.o -o cmTC_f96b8 
+        gmake[1]: Leaving directory '/home/praveenvnktsh/slam/code/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
