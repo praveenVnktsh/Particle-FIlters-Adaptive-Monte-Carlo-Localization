@@ -24,9 +24,15 @@ params = {
         "z_max": 0.05,
         "z_rand": 500
     },
-    "particle_decay_params": {
+    "sampling_params": {
         "decay_rate": 0.0001,
-        "decay_steps": 1000
+        "decay_steps": 1000,
+        "min_particles": 500,
+        "resampling_noise" : {
+            "x" : 2,
+            "y" : 2,
+            "theta" : 0.05,
+        }
     },
     "map_path" : '/home/praveenvnktsh/slam/data/map/wean.dat',
     "log_path" : '/home/praveenvnktsh/slam/data/log/robotdata1.log',

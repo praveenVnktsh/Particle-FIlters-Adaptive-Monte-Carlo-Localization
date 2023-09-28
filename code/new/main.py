@@ -40,10 +40,12 @@ def init_particles_freespace(num_particles, occupancy_map):
 #         print(error)
 
 def resample_particles(X_bar, timestep):
-    # kld_sampling(X_bar, timestep)
-    num_particles = np.shape(X_bar)[0]
-    r1 = np.random.uniform(0, 1/num_particles)
+    if timestep > params["sampling_params"]["decay_steps"]: 
+        global nparticles
+        nparticles = nparticles * np.exp(-params["sampling_params"]["decay_rate"] * (timestep - params["sampling_params"]["decay_steps"]))
+        nparticles = max(nparticles, params["sampling_params"]["min_particles"])
     
+    r1 = np.random.uniform(0, 1/nparticles)
 
     all_weights = X_bar[:,3]
     all_weights /= np.sum(X_bar[:,3])
@@ -51,23 +53,20 @@ def resample_particles(X_bar, timestep):
     i=0
     new_particles = []
     
-    # if timestep > 500: 
-        
-    #     global nparticles
-    #     nparticles = 1000
-    #     num_particles = 1000
-    for m in range(0, num_particles):
-        u1 = r1 + (m)*(1/num_particles)
+    
+    for m in range(0, nparticles):
+        u1 = r1 + (m)*(1/nparticles)
         while u1>c1:
             i += 1
             c1 += all_weights[i]
             
         x, y, theta = X_bar[i,:3].flatten()
-        # x += np.random.normal(0, 2)
-        # y += np.random.normal(0, 2)
-        # theta += np.random.normal(0, 0.05)
         
-        new_particles.append(np.array([x, y, theta, 1/num_particles]))
+        x += np.random.normal(0, params["resampling_noise"]["x"])
+        y += np.random.normal(0, params["resampling_noise"]["y"])
+        theta += np.random.normal(0, params["resampling_noise"]["theta"])
+        
+        new_particles.append(np.array([x, y, theta, 1/nparticles]))
 
     X_bar_resampled = np.vstack(new_particles)
     return X_bar_resampled
@@ -110,7 +109,7 @@ def motion_model_vec(u_t0, u_t1, x_t0):
 
 
 
-nparticles = 5000
+nparticles = params["n_particles"]
 
 ogm = load_ogm()
 X_bar = init_particles_freespace(nparticles, ogm)
