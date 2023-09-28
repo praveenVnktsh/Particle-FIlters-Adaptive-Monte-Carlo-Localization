@@ -155,7 +155,9 @@ if __name__ == '__main__':
     thresholded = thresholded.astype(np.uint8)
     
     dtransform = cv2.distanceTransform(thresholded, cv2.DIST_L2, 3)
-
+    dtransform -= np.min(dtransform)
+    dtransform /= np.max(dtransform)
+    
     # resized_map = occupancy_map.copy()
     # resized_map = cv2.resize(occupancy_map, (800, 800), interpolation=cv2.INTER_NEAREST)
     # resized_map -= np.min(resized_map)
@@ -169,6 +171,8 @@ if __name__ == '__main__':
     vizmap *= 255
     vizmap = vizmap.astype(np.uint8)
     vizmap = cv2.cvtColor(vizmap, cv2.COLOR_GRAY2BGR)
+    cv2.imshow('dtransform', occupancy_map)
+    cv2.waitKey(0)
     
     first_time_idx = True
     for time_idx, line in enumerate(logfile):

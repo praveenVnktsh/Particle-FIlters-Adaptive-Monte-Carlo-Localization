@@ -58,7 +58,7 @@ def compute_cast():
 
 
 
-np.save("precomputed_cast.npy", compute_cast())
+np.save(f"precomputed_cast_{_max_range}_{round(_min_probability * 100)}_{resolution}.npy", compute_cast())
 print("Done")
     
 
