@@ -1,2 +1,3 @@
 *.npy
 precomputed_cast.npy
+outputs/

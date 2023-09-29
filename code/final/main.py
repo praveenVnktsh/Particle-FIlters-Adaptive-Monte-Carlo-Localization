@@ -21,7 +21,7 @@ def init_particles_freespace(num_particles, occupancy_map):
     x0_vals = x[chosen_indices].reshape(-1, 1) * 10
     y0_vals = y[chosen_indices].reshape(-1, 1) * 10
     
-    theta0_vals = np.random.uniform(-3.14, 3.14, (num_particles, 1))
+    theta0_vals = np.random.uniform(0, 2*np.pi, (num_particles, 1))
 
     # initialize weights for all particles
     w0_vals = np.ones((num_particles, 1), dtype=np.float64)
@@ -44,6 +44,7 @@ def resample_particles(X_bar, timestep):
         global nparticles
         nparticles = nparticles * np.exp(-params["sampling_params"]["decay_rate"] * (timestep - params["sampling_params"]["decay_steps"]))
         nparticles = max(nparticles, params["sampling_params"]["min_particles"])
+        nparticles = int(nparticles)
     
     r1 = np.random.uniform(0, 1/nparticles)
 
@@ -62,9 +63,9 @@ def resample_particles(X_bar, timestep):
             
         x, y, theta = X_bar[i,:3].flatten()
         
-        x += np.random.normal(0, params["resampling_noise"]["x"])
-        y += np.random.normal(0, params["resampling_noise"]["y"])
-        theta += np.random.normal(0, params["resampling_noise"]["theta"])
+        x += np.random.normal(0, params["sampling_params"]["resampling_noise"]["x"])
+        y += np.random.normal(0, params["sampling_params"]["resampling_noise"]["y"])
+        theta += np.random.normal(0, params["sampling_params"]["resampling_noise"]["theta"])
         
         new_particles.append(np.array([x, y, theta, 1/nparticles]))
 
@@ -162,7 +163,7 @@ for time_idx, line in enumerate(logfile):
     X_bar = X_bar_new
     u_t0 = u_t1
     X_bar[:, 3] /= np.sum(X_bar[:, 3])
-    if meas_type == "L" and time_idx > 200:
+    if meas_type == "L" and time_idx > params["sampling_params"]["init_steps_without_resampling"]:
         X_bar = resample_particles(X_bar, time_idx)
         
         
@@ -174,7 +175,7 @@ for time_idx, line in enumerate(logfile):
         avg_y = np.average(X_bar_new[:, 1]) + 25 * np.sin(avg_theta)
         for idx, angle in enumerate(np.linspace(avg_theta - np.pi/2, avg_theta + np.pi/2, 180)):
             angle = np.mod((angle + 2 * np.pi), 2*np.pi)
-            msmt = ranges[idx]
+            msmt = min(ranges[idx], params["sensor_model"]["max_range"])
             x_t = msmt * np.cos(angle) + avg_x 
             y_t = msmt * np.sin(angle) + avg_y
             cv2.line(viz, (int(avg_x / 10), int(avg_y / 10)), (int(x_t / 10), int(y_t / 10)), (0, 0, 255), 1)
@@ -186,20 +187,26 @@ for time_idx, line in enumerate(logfile):
     if meas_type == "L":
         visualize(viz, 1)
         videoframes.append(viz[:, :, ::-1])
-    print(meas_type, time_idx)    
+    print(meas_type, "update at timestep", time_idx, "with", nparticles, "particles")    
 
 logfile.close()
 runtime = time.time() - starttime
 print("Simulation complete in ", runtime , "seconds")
-
+print(len(videoframes))
 # logging
 import os
+import json
 timestring = time.strftime("%Y%m%d-%H%M%S")
 dirname = f"outputs/{params['log_path'].split('/')[-1].split('.')[0]}_{timestring}/"
 os.makedirs(dirname, exist_ok=True)
 imageio.mimsave(dirname + 'video.mp4', videoframes, fps = 60)
-params['runtime'] = runtime
-with open(dirname + 'params.txt', 'w') as f:
-    f.write(str(params))
+params["run"] = {
+    "simulation_time": runtime,
+    "robot_runtime" : timestamp,
+    "speed_pct" : (timestamp * 100 / runtime)
+}
+with open(dirname + 'params.json', 'w') as f:
+    # f.write(str(params))
+    json.dump(params, f, indent=4)
     
     

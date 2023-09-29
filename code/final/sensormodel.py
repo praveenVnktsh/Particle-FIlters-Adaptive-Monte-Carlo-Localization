@@ -88,8 +88,6 @@ def beam_range_finder_model_vec(z_kt, x_t1):
     
     
     p = _z_hit * p_hit + _z_short * p_short + _z_max * p_max + _z_rand * p_rand
-    # print(z_kt.shape, p_hit.shape)
-    print(_z_hit * np.sum(p_hit), _z_short * np.sum(p_short), _z_max * np.sum(p_max), _z_rand * np.sum(p_rand))
     q = np.sum(np.log(p), axis = 1)
     q = np.exp(q)
     
